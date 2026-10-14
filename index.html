@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Practice web development with topic-wise HTML, CSS, JavaScript, React, Node.js, Express, MongoDB and MERN quizzes." />
+  <title>DevQuiz — Web Development Practice| syentexhub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="top-strip">
+    <a class="brand" href="#home" aria-label="DevQuiz home"><span class="brand-mark">&lt;/&gt;</span><span>Dev<span class="brand-accent">Quiz</span></span></a>
+    <div class="top-note"><span class="live-dot"></span> Practice mode <span class="top-separator">/</span> Learn by testing</div>
+    <a class="top-link" href="#topics">Explore topics <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <nav class="topic-nav" aria-label="Quiz topics" id="topic-nav">
+    <button class="nav-topic active" data-topic="home">Home</button>
+    <button class="nav-topic" data-topic="HTML">HTML</button>
+    <button class="nav-topic" data-topic="CSS">CSS</button>
+    <button class="nav-topic" data-topic="JavaScript">JavaScript</button>
+    <button class="nav-topic" data-topic="React">React</button>
+    <button class="nav-topic" data-topic="Node.js">Node.js</button>
+    <button class="nav-topic" data-topic="Express.js">Express.js</button>
+    <button class="nav-topic" data-topic="MongoDB">MongoDB</button>
+    <button class="nav-topic" data-topic="MERN Stack">MERN Stack</button>
+    <button class="nav-full-test" id="nav-full-test"><span>✦</span> Full Test</button>
+  </nav>
+
+  <main>
+    <section id="home-screen" class="screen home-screen">
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-icon">✳</span> YOUR WEB DEV PRACTICE LAB</div>
+          <h1>Build your skills.<br><span>One question at a time.</span></h1>
+          <p class="hero-description">Sharpen your fundamentals with focused quizzes across the modern web development stack. Practice a single topic or challenge yourself with the complete test.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" id="hero-full-test">Start full test <span aria-hidden="true">→</span></button>
+            <a class="button button-ghost" href="#topics">Choose a topic <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-proof"><div class="avatar-stack"><span>H</span><span>C</span><span>JS</span><span>R</span></div><span>8 topics</span><i></i><span>80 practice questions</span><i></i><span>80 min full test</span></div>
+        </div>
+        <div class="hero-art" aria-label="Code-themed illustration">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="code-window">
+            <div class="window-bar"><div class="window-dots"><i></i><i></i><i></i></div><span>app.js</span><span class="window-status">● Ready</span></div>
+            <div class="code-lines" aria-hidden="true">
+              <div><span class="ln">01</span><span class="code-purple">const</span> <span class="code-blue">developer</span> = {</div>
+              <div><span class="ln">02</span>&nbsp;&nbsp;curiosity: <span class="code-green">true</span>,</div>
+              <div><span class="ln">03</span>&nbsp;&nbsp;practice: <span class="code-green">"daily"</span>,</div>
+              <div><span class="ln">04</span>&nbsp;&nbsp;skills: [</div>
+              <div><span class="ln">05</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-orange">"HTML"</span>, <span class="code-orange">"CSS"</span>,</div>
+              <div><span class="ln">06</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-orange">"JavaScript"</span>, <span class="code-orange">"MERN"</span></div>
+              <div><span class="ln">07</span>&nbsp;&nbsp;]</div>
+              <div><span class="ln">08</span>}; <span class="cursor"></span></div>
+            </div>
+            <div class="code-window-footer"><span><span class="check-icon">✓</span> Ready to level up</span><span>UTF-8&nbsp; • &nbsp;JavaScript</span></div>
+          </div>
+          <div class="float-card float-card-top"><span class="float-icon">⌘</span><span><strong>8 learning paths</strong><small>Pick your focus</small></span></div>
+          <div class="float-card float-card-bottom"><span class="float-icon green-float">✓</span><span><strong>Track your result</strong><small>Review every answer</small></span></div>
+        </div>
+      </section>
+
+      <section class="stats-row" aria-label="Quiz statistics">
+        <div class="stat"><span class="stat-icon">▦</span><div><strong>08</strong><small>Focused topics</small></div></div>
+        <div class="stat"><span class="stat-icon">☷</span><div><strong>80</strong><small>MCQ questions</small></div></div>
+        <div class="stat"><span class="stat-icon">◷</span><div><strong>80:00</strong><small>Full test duration</small></div></div>
+        <div class="stat"><span class="stat-icon">↗</span><div><strong>100%</strong><small>Self-paced practice</small></div></div>
+      </section>
+
+      <section class="topics-section" id="topics">
+        <div class="section-heading"><div><div class="eyebrow">PICK YOUR NEXT CHALLENGE</div><h2>Explore the topics</h2><p>Choose one subject to focus on, or take the full-stack test.</p></div><span class="heading-side-note">01 <span>/</span> 08 TOPICS</span></div>
+        <div class="topic-grid" id="topic-grid"></div>
+        <div class="full-test-banner"><div class="banner-icon">✦</div><div><strong>Ready for the full-stack challenge?</strong><p>Answer 80 questions across all eight topics. One minute is allotted per question.</p></div><button class="button button-banner" id="banner-full-test">Take the 80-min test <span>→</span></button></div>
+      </section>
+    </section>
+
+    <section id="topic-screen" class="screen topic-screen hidden">
+      <div class="topic-intro" id="topic-intro"></div>
+      <div class="topic-info-row"><div><span class="eyebrow">YOUR PRACTICE SESSION</span><h2>Test your knowledge</h2><p>Answer each question to unlock the next one. Skipping ahead is disabled.</p></div><div class="topic-facts"><div><span>QUESTIONS</span><strong id="topic-question-total">10</strong></div><div><span>TIME LIMIT</span><strong id="topic-time-limit">10:00</strong></div><div><span>FORMAT</span><strong>Multiple choice</strong></div></div></div>
+      <div class="start-panel"><div class="start-panel-icon" id="start-panel-icon">&lt;/&gt;</div><div class="start-panel-copy"><h3 id="start-panel-title">Ready to begin?</h3><p id="start-panel-description">You have 10 questions and 10 minutes. Answer each question to unlock the next one.</p></div><button class="button button-primary" id="start-topic-btn">Start quiz <span>→</span></button></div>
+    </section>
+
+    <section id="quiz-screen" class="screen quiz-screen hidden">
+      <div class="quiz-heading"><div><div class="eyebrow"><span class="live-dot"></span> QUIZ IN PROGRESS</div><h1 id="quiz-title">HTML <span>Practice Quiz</span></h1><p id="quiz-subtitle">Take your time, read each question carefully.</p></div><div class="timer-box" id="timer-box"><span class="timer-icon">◷</span><div><small>TIME REMAINING</small><strong id="timer">10:00</strong></div></div></div>
+      <div class="quiz-progress-wrap"><div class="quiz-progress-label"><span id="progress-label">Question 1 of 10</span><span id="answered-label">0 answered</span></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div></div>
+      <div class="quiz-layout">
+        <article class="question-card">
+          <div class="question-card-top"><span class="question-tag" id="question-tag">HTML BASICS</span><span class="question-points">1 point</span></div>
+          <div class="question-number" id="question-number">QUESTION 01</div>
+          <h2 id="question-text">Question appears here</h2>
+          <p class="question-hint">Select one answer below.</p>
+          <div class="options-list" id="options-list"></div>
+          <div class="question-footer"><button class="button button-subtle" id="prev-btn" disabled><span>←</span> Previous</button><div class="footer-right"><button class="button button-primary" id="next-btn" disabled>Next question <span>→</span></button></div></div>
+        </article>
+        <aside class="question-sidebar"><div class="sidebar-panel"><div class="sidebar-title"><div><strong>Question map</strong><small>Unlock questions in order</small></div><span class="map-symbol">▦</span></div><div class="question-map" id="question-map"></div><div class="map-legend"><span><i class="legend-current"></i>Current</span><span><i class="legend-answered"></i>Answered</span><span><i class="legend-empty"></i>Unanswered</span></div></div><div class="sidebar-tip"><span>✦</span><div><strong>Quick tip</strong><p>There’s no penalty for wrong answers. Try every question before time runs out.</p></div></div><button class="button button-submit-wide" id="submit-btn">Submit quiz <span>✓</span></button></aside>
+      </div>
+    </section>
+
+    <section id="result-screen" class="screen result-screen hidden">
+      <div class="result-hero"><div class="result-confetti" aria-hidden="true">✦　✧　✦</div><div class="result-badge" id="result-badge">✓</div><div class="eyebrow">SESSION COMPLETE</div><h1 id="result-title">Nice work!</h1><p id="result-message">Here is how you did.</p><div class="result-score-line"><strong id="result-score">0/10</strong><span id="result-percent">0%</span></div><div class="result-score-track"><div id="result-score-fill"></div></div><div class="result-meta"><span><i class="meta-dot correct-dot"></i><strong id="result-correct">0</strong> correct</span><span><i class="meta-dot wrong-dot"></i><strong id="result-incorrect">0</strong> incorrect</span><span><i class="meta-dot time-dot"></i><strong id="result-time">00:00</strong> used</span></div></div>
+      <div class="result-actions"><button class="button button-primary" id="retry-btn">Try again <span>↻</span></button><button class="button button-ghost-light" id="review-btn">Review answers <span>↓</span></button><button class="button button-subtle" id="back-topics-btn">Choose another topic</button></div>
+      <div class="review-section hidden" id="review-section"><div class="section-heading"><div><div class="eyebrow">LEARN FROM THE RESULTS</div><h2>Answer review</h2><p>See what you answered and read the explanation for each question.</p></div></div><div class="review-list" id="review-list"></div><button class="button button-primary review-bottom-btn" id="review-retry-btn">Retry this quiz <span>↻</span></button></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">&lt;/&gt;</span><span>Dev<span class="brand-accent">Quiz</span></span></a><span>Practice makes progress.</span><span>Built for curious developers <b>✳</b></span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop hidden" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title"><div class="confirm-card"><div class="confirm-icon">?</div><h2 id="confirm-title">Submit your quiz?</h2><p id="confirm-copy">You can still go back and review your answers.</p><div class="confirm-actions"><button class="button button-subtle" id="cancel-submit">Keep working</button><button class="button button-primary" id="confirm-submit">Submit now</button></div></div></div>
+</body>
+</html>
